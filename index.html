@@ -11,11 +11,11 @@
 </head>
 <body>
     <!-- Аудиоплеер -->
-    <audio id="weddingMusic" loop autoplay>
+    <audio id="weddingMusic" loop>
         <source src="муз/муз.mp3" type="audio/mp3">
         Ваш браузер не поддерживает аудио элемент.
     </audio>
-    <button id="musicToggle" class="music-btn">🔇 Выключить звук</button>
+    <button id="musicToggle" class="music-btn">🔇</button>
 
     <div class="wrapper">
         <!-- Главный экран -->
@@ -61,11 +61,19 @@
                     <h3>Венчание</h3>
                     <p class="details__time">16:00</p>
                     <p class="details__place">Республика Адыгея, станица Дагестанская, ул. Родниковая, 2</p>
+                    <!-- Карта 1 -->
+                    <div class="map-container">
+                        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ae87b5e27fea67d421a2b18d6b59f8b4d7c5f4b2c6c6a6f6a6f6a6f6a6f6a6f6a6&amp;width=100%&amp;height=300&amp;lang=ru_RU&amp;scroll=true"></script>
+                    </div>
                 </div>
                 <div class="details__item">
                     <h3>Брачный пир</h3>
                     <p class="details__time">18:00</p>
                     <p class="details__place">Республика Адыгея, Майкопский район, станица Курджипская, ул. Чкалова, 11</p>
+                    <!-- Карта 2 -->
+                    <div class="map-container">
+                        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ae87b5e27fea67d421a2b18d6b59f8b4d7c5f4b2c6c6a6f6a6f6a6f6a6f6a6f6a6&amp;width=100%&amp;height=300&amp;lang=ru_RU&amp;scroll=true"></script>
+                    </div>
                 </div>
             </div>
         </section>
@@ -85,8 +93,8 @@
         <!-- Подарки -->
         <section class="gifts">
             <h2>Наши пожелания о подарках</h2>
-            <p>Ваши поздравления и тёплые слова — лучший подарок для нас!</p>
-            <p>Если вы хотите сделать нам финансовый подарок, мы будем благодарны вашей помощи в осуществлении нашей мечты.</p>
+            <p>Ваши улыбки и тёплые слова — вот что для нас по-настоящему ценно.</p>
+            <p>А лучший подарок, который легко поместится в конверт, — это ваша помощь в исполнении нашей общей мечты.</p>
         </section>
 
         <!-- Форма подтверждения -->
