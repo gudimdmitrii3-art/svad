@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Максим и Настя | Приглашение на свадьбу</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=El+Messiri:wght@400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Аудиоплеер -->
+    <audio id="weddingMusic" loop autoplay>
+        <source src="муз/муз.mp3" type="audio/mp3">
+        Ваш браузер не поддерживает аудио элемент.
+    </audio>
+    <button id="musicToggle" class="music-btn">🔇 Выключить звук</button>
+
+    <div class="wrapper">
+        <!-- Главный экран -->
+        <section class="hero" id="home">
+            <div class="hero__content">
+                <h1>Максим <span>&</span> Настя</h1>
+                <p class="hero__date">12/10/2025</p>
+                <p class="hero__verse">«И дам им одно сердце и один путь...»<br>(Иер. 32:39)</p>
+            </div>
+            <div class="hero__image">
+                <img src="images/WhatsApp Image 2025-09-19 at 10.51.41.jpeg" alt="Максим и Настя">
+            </div>
+        </section>
+
+        <!-- Таймер -->
+        <section class="countdown">
+            <h2>До нашего дня осталось</h2>
+            <div class="countdown__timer" id="timer">
+                <div class="countdown__item">
+                    <span class="countdown__number" id="days">00</span>
+                    <span class="countdown__label">дней</span>
+                </div>
+                <div class="countdown__item">
+                    <span class="countdown__number" id="hours">00</span>
+                    <span class="countdown__label">часов</span>
+                </div>
+                <div class="countdown__item">
+                    <span class="countdown__number" id="minutes">00</span>
+                    <span class="countdown__label">минут</span>
+                </div>
+                <div class="countdown__item">
+                    <span class="countdown__number" id="seconds">00</span>
+                    <span class="countdown__label">секунд</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Детали -->
+        <section class="details">
+            <h2>В день нашего бракосочетания</h2>
+            <div class="details__container">
+                <div class="details__item">
+                    <h3>Венчание</h3>
+                    <p class="details__time">16:00</p>
+                    <p class="details__place">Республика Адыгея, станица Дагестанская, ул. Родниковая, 2</p>
+                </div>
+                <div class="details__item">
+                    <h3>Брачный пир</h3>
+                    <p class="details__time">18:00</p>
+                    <p class="details__place">Республика Адыгея, Майкопский район, станица Курджипская, ул. Чкалова, 11</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Дресс-код -->
+        <section class="dresscode">
+            <h2>Дресс-код</h2>
+            <p>Мы будем рады, если вы поддержите праздничную атмосферу в нарядах спокойных пастельных тонов:</p>
+            <div class="dresscode__colors">
+                <div class="dresscode__color" style="background-color: #6D7A71;"></div>
+                <div class="dresscode__color" style="background-color: #BA506A;"></div>
+                <div class="dresscode__color" style="background-color: #EFEADD;"></div>
+                <div class="dresscode__color" style="background-color: #E8D7C7;"></div>
+            </div>
+        </section>
+
+        <!-- Подарки -->
+        <section class="gifts">
+            <h2>Наши пожелания о подарках</h2>
+            <p>Ваши поздравления и тёплые слова — лучший подарок для нас!</p>
+            <p>Если вы хотите сделать нам финансовый подарок, мы будем благодарны вашей помощи в осуществлении нашей мечты.</p>
+        </section>
+
+        <!-- Форма подтверждения -->
+        <section class="rsvp">
+            <h2>Подтвердите ваше присутствие</h2>
+            <p>Пожалуйста, ответьте до 1 октября 2025 года</p>
+            
+            <form class="rsvp__form" action="https://formsubmit.co/YOUREMAIL@HERE.COM" method="POST">
+                <input type="hidden" name="_subject" value="Новый ответ на свадьбу!">
+                <input type="hidden" name="_template" value="table">
+                
+                <div class="form-group">
+                    <label for="name">Ваше имя и фамилия</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>Вы придёте?</label>
+                    <div class="radio-group">
+                        <label>
+                            <input type="radio" name="attendance" value="Приду" required>
+                            <span>С радостью приду!</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="attendance" value="Не смогу">
+                            <span>К сожалению, не смогу</span>
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="guests">Количество гостей (включая вас)</label>
+                    <select id="guests" name="guests">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Ваши пожелания (необязательно)</label>
+                    <textarea id="message" name="message" rows="3"></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">Отправить ответ</button>
+            </form>
+        </section>
+
+        <!-- Контакты -->
+        <section class="contacts">
+            <h2>По всем вопросам</h2>
+            <div class="contacts__list">
+                <div class="contacts__person">
+                    <h3>Максим</h3>
+                    <a href="tel:+79250676913">+7 (925) 067-69-13</a>
+                </div>
+                <div class="contacts__person">
+                    <h3>Настя</h3>
+                    <a href="tel:+79189260826">+7 (918) 926-08-26</a>
+                </div>
+                <div class="contacts__person">
+                    <h3>Ведущий Сергей</h3>
+                    <a href="tel:+79525995824">+7 (952) 599-58-24</a>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <p>С любовью, Максим и Настя</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
