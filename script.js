@@ -27,13 +27,19 @@ function clearCountdown() {
 const audio = document.getElementById('weddingMusic');
 const musicToggle = document.getElementById('musicToggle');
 
+// По умолчанию музыка выключена
+audio.pause();
+musicToggle.textContent = '🔇';
+
 function toggleMusic() {
     if (audio.paused) {
-        audio.play();
-        musicToggle.textContent = '🔇 Выключить звук';
+        audio.play().catch(error => {
+            console.log('Автовоспроизведение заблокировано:', error);
+        });
+        musicToggle.textContent = '🔊';
     } else {
         audio.pause();
-        musicToggle.textContent = '🔊 Включить звук';
+        musicToggle.textContent = '🔇';
     }
 }
 
