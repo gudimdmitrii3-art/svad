@@ -186,27 +186,44 @@ p {
     color: #6D7A71;
 }
 
+/* Карты */
+.map-container {
+    margin-top: 1.5rem;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
 /* Дресс-код */
 .dresscode {
     padding: 4rem 1rem;
     background-color: #E8D7C7;
     border-radius: 15px;
     margin: 2rem 0;
+    text-align: center;
 }
 
-.dresscode__colors {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    margin-top: 2rem;
-    flex-wrap: wrap;
+.dresscode__image {
+    width: 100%;
+    max-width: 300px;
+    margin: 2rem auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
-.dresscode__color {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+.dresscode__image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.dresscode__text {
+    font-style: italic;
+    color: #6D7A71;
+    margin-top: 1.5rem;
+    text-align: center;
+    line-height: 1.6;
 }
 
 /* Подарки */
@@ -379,13 +396,14 @@ p {
         min-width: 100%;
     }
     
-    .dresscode__colors {
-        gap: 1rem;
+    .dresscode__image {
+        max-width: 250px;
+        margin: 1.5rem auto;
     }
     
-    .dresscode__color {
-        width: 50px;
-        height: 50px;
+    .dresscode {
+        padding: 2rem 1rem;
+        margin: 1.5rem 0;
     }
     
     .contacts__list {
@@ -396,31 +414,10 @@ p {
     .rsvp__form {
         padding: 1.5rem;
     }
-}/* Добавляем в конец файла стили для новой секции дресс-кода */
-.dresscode__image {
-    width: 100%;
-    max-width: 400px;
-    margin: 2rem auto;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
-.dresscode__image img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-.dresscode__text {
-    font-style: italic;
-    color: #6D7A71;
-    margin-top: 1.5rem;
-    text-align: center;
-    line-height: 1.6;
-}
-
-/* Убираем старые цветовые круги */
-.dresscode__colors {
-    display: none;
+@media (max-width: 480px) {
+    .dresscode__image {
+        max-width: 200px;
+    }
 }
