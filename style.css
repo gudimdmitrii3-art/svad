@@ -10,7 +10,7 @@ body {
     background-color: #EFEADD;
     color: #5A6A62;
     line-height: 1.6;
-    padding-top: 50px;
+    padding-top: 60px;
 }
 
 .wrapper {
@@ -50,21 +50,17 @@ p {
 /* Кнопка управления музыкой */
 .music-btn {
     position: fixed;
-    top: 15px;
-    right: 15px;
+    top: 20px;
+    right: 20px;
     z-index: 1000;
     background: #BA506A;
     color: white;
     border: none;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
+    padding: 10px 15px;
+    border-radius: 20px;
     cursor: pointer;
     font-family: inherit;
     box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 /* Секция Героя */
@@ -128,7 +124,7 @@ p {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 2rem;
     margin-top: 2rem;
 }
 
@@ -136,24 +132,22 @@ p {
     display: flex;
     flex-direction: column;
     background-color: #EFEADD;
-    padding: 1rem;
+    padding: 1.5rem 1rem;
     border-radius: 10px;
-    min-width: 70px;
+    min-width: 100px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .countdown__number {
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: 700;
     color: #BA506A;
-    white-space: nowrap;
 }
 
 .countdown__label {
-    font-size: 0.8rem;
+    font-size: 1rem;
     color: #6D7A71;
     margin-top: 0.5rem;
-    white-space: nowrap;
 }
 
 /* Детали */
@@ -190,14 +184,6 @@ p {
 .details__place {
     font-style: italic;
     color: #6D7A71;
-}
-
-/* Карты */
-.map-container {
-    margin-top: 1.5rem;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
 }
 
 /* Дресс-код */
@@ -353,14 +339,14 @@ p {
 /* Адаптивность */
 @media (max-width: 768px) {
     body {
-        padding-top: 60px;
+        padding-top: 80px;
     }
     
     .music-btn {
         top: 10px;
         right: 10px;
-        width: 35px;
-        height: 35px;
+        padding: 8px 12px;
+        font-size: 0.9rem;
     }
     
     h1 {
@@ -372,20 +358,16 @@ p {
     }
     
     .countdown__timer {
-        gap: 0.5rem;
+        gap: 1rem;
     }
     
     .countdown__item {
-        min-width: 60px;
-        padding: 0.8rem 0.5rem;
+        min-width: 70px;
+        padding: 1rem 0.5rem;
     }
     
     .countdown__number {
-        font-size: 1.5rem;
-    }
-    
-    .countdown__label {
-        font-size: 0.7rem;
+        font-size: 1.8rem;
     }
     
     .details__container {
@@ -414,4 +396,31 @@ p {
     .rsvp__form {
         padding: 1.5rem;
     }
+}/* Добавляем в конец файла стили для новой секции дресс-кода */
+.dresscode__image {
+    width: 100%;
+    max-width: 400px;
+    margin: 2rem auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.dresscode__image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.dresscode__text {
+    font-style: italic;
+    color: #6D7A71;
+    margin-top: 1.5rem;
+    text-align: center;
+    line-height: 1.6;
+}
+
+/* Убираем старые цветовые круги */
+.dresscode__colors {
+    display: none;
 }
