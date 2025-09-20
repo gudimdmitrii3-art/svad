@@ -71,12 +71,11 @@
             </div>
         </section>
 
-        <!-- Дресс-код с фото ткани -->
         <section class="dresscode">
             <h2>Дресс-код</h2>
             <p>Друзья, мы рады видеть вас в нарядах пастельных тонов, которые гармонируют с нашей цветовой палитрой</p>
             <div class="dresscode__image">
-                <img src="images/цв.jpeg" alt="Цветовая палитра">
+                <img src="images/cv.jpeg" alt="Цветовая палитра">
             </div>
             <p class="dresscode__text">
                 В этот особенный день мы хотим оказаться в окружении самых любимых и дорогих для нас людей.<br>
@@ -84,7 +83,6 @@
             </p>
         </section>
 
-        <!-- Остальные секции остаются без изменений -->
         <section class="gifts">
             <h2>Наши пожелания о подарках</h2>
             <p>Ваши улыбки и тёплые слова — вот что для нас по-настоящему ценно.</p>
@@ -96,7 +94,44 @@
             <p>Пожалуйста, ответьте до 1 октября 2025 года</p>
             
             <form class="rsvp__form" action="https://formsubmit.co/YOUREMAIL@HERE.COM" method="POST">
-                <!-- форма без изменений -->
+                <input type="hidden" name="_subject" value="Новый ответ на свадьбу!">
+                <input type="hidden" name="_template" value="table">
+                
+                <div class="form-group">
+                    <label for="name">Ваше имя и фамилия</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>Вы придёте?</label>
+                    <div class="radio-group">
+                        <label>
+                            <input type="radio" name="attendance" value="Приду" required>
+                            <span>С радостью приду!</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="attendance" value="Не смогу">
+                            <span>К сожалению, не смогу</span>
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="guests">Количество гостей (включая вас)</label>
+                    <select id="guests" name="guests">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Ваши пожелания (необязательно)</label>
+                    <textarea id="message" name="message" rows="3"></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">Отправить ответ</button>
             </form>
         </section>
 
