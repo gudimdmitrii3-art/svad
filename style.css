@@ -1,12 +1,9 @@
-/* Цветовая палитра - темно-коричневый фон и темно-зеленые буквы */
+/* Цветовая палитра */
 :root {
-    --dark-brown: #533024;
-    --medium-brown: #835845;
-    --dark-green: #444B3C;
-    --dark-gray: #313227;
-    --cream: #EFEADD;
-    --text-dark-green: #2D3327;
     --background-brown: #533024;
+    --text-color: #313227;
+    --cream: #EFEADD;
+    --medium-brown: #835845;
 }
 
 /* Общие стили и сброс */
@@ -19,7 +16,7 @@
 body {
     font-family: 'El Messiri', 'Cormorant Infant', serif;
     background-color: var(--background-brown);
-    color: var(--text-dark-green);
+    color: var(--text-color);
     line-height: 1.6;
     padding-top: 60px;
 }
@@ -36,30 +33,28 @@ body {
 h1, h2, h3 {
     font-weight: 600;
     text-align: center;
+    color: var(--text-color);
 }
 
 h1 {
     font-size: 3.5rem;
     margin-bottom: 0.5rem;
-    color: var(--dark-green);
 }
 
 h2 {
     font-size: 2.5rem;
     margin: 3rem 0 2rem 0;
-    color: var(--dark-green);
 }
 
 h3 {
     font-size: 1.8rem;
     margin-bottom: 1rem;
-    color: var(--dark-green);
 }
 
 p {
     margin-bottom: 1rem;
     text-align: center;
-    color: var(--text-dark-green);
+    color: var(--text-color);
 }
 
 /* Кнопка управления музыкой */
@@ -68,7 +63,7 @@ p {
     top: 20px;
     right: 20px;
     z-index: 1000;
-    background: var(--dark-green);
+    background: var(--text-color);
     color: white;
     border: none;
     padding: 10px 15px;
@@ -108,7 +103,7 @@ p {
 .hero__verse {
     font-style: italic;
     font-size: 1.2rem;
-    color: var(--dark-green);
+    color: var(--text-color);
 }
 
 .hero__image {
@@ -162,7 +157,7 @@ p {
 
 .countdown__label {
     font-size: 0.8rem;
-    color: var(--dark-green);
+    color: var(--text-color);
     margin-top: 0.5rem;
     white-space: nowrap;
 }
@@ -200,7 +195,7 @@ p {
 
 .details__place {
     font-style: italic;
-    color: var(--dark-green);
+    color: var(--text-color);
 }
 
 /* Карты */
@@ -266,7 +261,7 @@ p {
     display: block;
     margin-bottom: 0.5rem;
     font-weight: 600;
-    color: var(--dark-green);
+    color: var(--text-color);
     text-align: left;
 }
 
@@ -308,7 +303,7 @@ p {
 
 .submit-btn {
     width: 100%;
-    background: var(--dark-green);
+    background: var(--text-color);
     color: white;
     border: none;
     padding: 15px;
@@ -343,7 +338,7 @@ p {
 .contacts__person a {
     display: block;
     font-size: 1.2rem;
-    color: var(--dark-green);
+    color: var(--text-color);
     text-decoration: none;
     margin-top: 0.5rem;
 }
@@ -354,7 +349,7 @@ p {
 
 .contacts__note {
     font-size: 0.9rem;
-    color: var(--dark-gray);
+    color: #666;
     margin-top: 0.5rem;
     font-style: italic;
 }
@@ -362,82 +357,41 @@ p {
 .telegram-link {
     margin-top: 2rem;
     padding: 1.5rem;
-    background-color: rgba(131, 88, 69, 0.1);
+    background-color: rgba(49, 50, 39, 0.1);
     border-radius: 10px;
     text-align: center;
 }
 
 .telegram-link a {
-    color: var(--medium-brown);
+    color: var(--text-color);
     font-weight: bold;
     text-decoration: none;
     font-size: 1.1rem;
 }
 
 .telegram-link a:hover {
-    color: var(--dark-brown);
+    color: var(--medium-brown);
 }
 
-/* Галерея с слайдером */
+/* Галерея - вертикальное расположение */
 .gallery {
     padding: 3rem 1rem;
     text-align: center;
 }
 
-.gallery__container {
-    position: relative;
-    max-width: 500px;
-    margin: 0 auto;
-}
-
-.gallery__slider {
-    position: relative;
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
-}
-
-.gallery__slide {
-    display: none;
-}
-
-.gallery__slide.active {
-    display: block;
-}
-
-.gallery__slide img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-.gallery__controls {
+.gallery__images {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
     gap: 2rem;
-    margin-top: 1rem;
+    align-items: center;
 }
 
-.gallery__prev,
-.gallery__next {
-    background: var(--dark-green);
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 50%;
-    cursor: pointer;
-    font-size: 1.2rem;
-}
-
-.gallery__prev:hover,
-.gallery__next:hover {
-    background: var(--medium-brown);
-}
-
-.gallery__counter {
-    color: var(--dark-green);
-    font-weight: bold;
+.gallery__images img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
 /* Футер */
@@ -445,7 +399,7 @@ p {
     text-align: center;
     padding: 2rem;
     margin-top: 2rem;
-    color: var(--dark-green);
+    color: var(--text-color);
     font-style: italic;
     border-top: 1px solid #E8D7C7;
 }
@@ -522,12 +476,8 @@ p {
         padding: 1.5rem;
     }
     
-    .gallery__container {
+    .gallery__images img {
         max-width: 100%;
-    }
-    
-    .gallery__controls {
-        gap: 1rem;
     }
 }
 
@@ -543,11 +493,5 @@ p {
     
     .countdown__number {
         font-size: 1.3rem;
-    }
-    
-    .gallery__prev,
-    .gallery__next {
-        padding: 8px 12px;
-        font-size: 1rem;
     }
 }
