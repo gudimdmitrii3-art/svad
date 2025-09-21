@@ -1,6 +1,6 @@
 // Таймер обратного отсчета
 function updateCountdown() {
-    const weddingDate = new Date('October 12, 2025 16:00:00').getTime();
+    const weddingDate = new Date('October 12, 2025 10:00:00').getTime();
     const now = new Date().getTime();
     const distance = weddingDate - now;
 
@@ -9,10 +9,17 @@ function updateCountdown() {
     const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
+    // Первый таймер
     document.getElementById("days").innerText = days.toString().padStart(2, '0');
     document.getElementById("hours").innerText = hours.toString().padStart(2, '0');
     document.getElementById("minutes").innerText = minutes.toString().padStart(2, '0');
     document.getElementById("seconds").innerText = seconds.toString().padStart(2, '0');
+
+    // Второй таймер
+    document.getElementById("days2").innerText = days.toString().padStart(2, '0');
+    document.getElementById("hours2").innerText = hours.toString().padStart(2, '0');
+    document.getElementById("minutes2").innerText = minutes.toString().padStart(2, '0');
+    document.getElementById("seconds2").innerText = seconds.toString().padStart(2, '0');
 
     if (distance < 0) {
         clearCountdown();
@@ -20,7 +27,9 @@ function updateCountdown() {
 }
 
 function clearCountdown() {
-    document.getElementById("timer").innerHTML = "<div class='countdown__item'><span class='countdown__number' style='font-size: 2rem;'>Мы поженились!</span></div>";
+    const timerText = "<div class='countdown__item'><span class='countdown__number' style='font-size: 1.5rem;'>Мы поженились!</span></div>";
+    document.getElementById("timer").innerHTML = timerText;
+    document.getElementById("timer2").innerHTML = timerText;
 }
 
 // Управление музыкой
