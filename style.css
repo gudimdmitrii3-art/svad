@@ -1,7 +1,7 @@
 /* Цветовая палитра */
 :root {
-    --background-brown: #533024;
-    --text-color: #313227;
+    --main-brown: #533024;
+    --text-green: #313227;
     --cream: #EFEADD;
     --medium-brown: #835845;
 }
@@ -15,8 +15,8 @@
 
 body {
     font-family: 'El Messiri', 'Cormorant Infant', serif;
-    background-color: var(--background-brown);
-    color: var(--text-color);
+    background-color: var(--main-brown);
+    color: var(--text-green);
     line-height: 1.6;
     padding-top: 60px;
 }
@@ -25,15 +25,12 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
-    background-color: var(--cream);
-    border-radius: 15px;
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
 }
 
 h1, h2, h3 {
     font-weight: 600;
     text-align: center;
-    color: var(--text-color);
+    color: var(--text-green);
 }
 
 h1 {
@@ -54,7 +51,7 @@ h3 {
 p {
     margin-bottom: 1rem;
     text-align: center;
-    color: var(--text-color);
+    color: var(--text-green);
 }
 
 /* Кнопка управления музыкой */
@@ -63,7 +60,7 @@ p {
     top: 20px;
     right: 20px;
     z-index: 1000;
-    background: var(--text-color);
+    background: var(--text-green);
     color: white;
     border: none;
     padding: 10px 15px;
@@ -90,20 +87,20 @@ p {
 }
 
 .hero__content span {
-    color: var(--medium-brown);
+    color: var(--text-green);
     font-style: italic;
 }
 
 .hero__date {
     font-size: 1.5rem;
     margin: 1rem 0;
-    color: var(--medium-brown);
+    color: var(--text-green);
 }
 
 .hero__verse {
     font-style: italic;
     font-size: 1.2rem;
-    color: var(--text-color);
+    color: var(--text-green);
 }
 
 .hero__image {
@@ -125,7 +122,7 @@ p {
 .countdown {
     text-align: center;
     padding: 4rem 1rem;
-    background-color: #E8D7C7;
+    background-color: var(--main-brown);
     border-radius: 15px;
     margin: 2rem 0;
 }
@@ -141,23 +138,23 @@ p {
 .countdown__item {
     display: flex;
     flex-direction: column;
-    background-color: var(--cream);
+    background-color: rgba(255, 255, 255, 0.1);
     padding: 1rem 0.5rem;
     border-radius: 10px;
     min-width: 70px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .countdown__number {
     font-size: 2rem;
     font-weight: 700;
-    color: var(--medium-brown);
+    color: var(--text-green);
     white-space: nowrap;
 }
 
 .countdown__label {
     font-size: 0.8rem;
-    color: var(--text-color);
+    color: var(--text-green);
     margin-top: 0.5rem;
     white-space: nowrap;
 }
@@ -166,6 +163,9 @@ p {
 .details {
     padding: 4rem 1rem;
     text-align: center;
+    background-color: var(--main-brown);
+    border-radius: 15px;
+    margin: 2rem 0;
 }
 
 .details__container {
@@ -180,22 +180,22 @@ p {
     flex: 1;
     min-width: 300px;
     max-width: 400px;
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.1);
     padding: 2rem;
     border-radius: 15px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
 }
 
 .details__time {
     font-size: 1.5rem;
     font-weight: 600;
-    color: var(--medium-brown);
+    color: var(--text-green);
     margin: 1rem 0;
 }
 
 .details__place {
     font-style: italic;
-    color: var(--text-color);
+    color: var(--text-green);
 }
 
 /* Карты */
@@ -203,13 +203,13 @@ p {
     margin-top: 1.5rem;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
 }
 
 /* Дресс-код */
 .dresscode {
     padding: 3rem 1rem;
-    background-color: #E8D7C7;
+    background-color: var(--main-brown);
     border-radius: 15px;
     margin: 2rem 0;
     text-align: center;
@@ -221,7 +221,7 @@ p {
     margin: 2rem auto;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
 .dresscode__image img {
@@ -234,12 +234,15 @@ p {
 .gifts {
     padding: 4rem 1rem;
     text-align: center;
+    background-color: var(--main-brown);
+    border-radius: 15px;
+    margin: 2rem 0;
 }
 
 /* Форма */
 .rsvp {
     padding: 4rem 1rem;
-    background-color: #E8D7C7;
+    background-color: var(--main-brown);
     border-radius: 15px;
     margin: 2rem 0;
 }
@@ -247,10 +250,10 @@ p {
 .rsvp__form {
     max-width: 500px;
     margin: 0 auto;
-    background: white;
+    background: rgba(255, 255, 255, 0.1);
     padding: 2rem;
     border-radius: 15px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
 }
 
 .form-group {
@@ -261,7 +264,7 @@ p {
     display: block;
     margin-bottom: 0.5rem;
     font-weight: 600;
-    color: var(--text-color);
+    color: var(--text-green);
     text-align: left;
 }
 
@@ -270,17 +273,19 @@ p {
 .form-group textarea {
     width: 100%;
     padding: 12px;
-    border: 2px solid #E8D7C7;
+    border: 2px solid rgba(255, 255, 255, 0.2);
     border-radius: 8px;
     font-family: inherit;
     font-size: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text-green);
 }
 
 .form-group input:focus,
 .form-group select:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: var(--medium-brown);
+    border-color: var(--text-green);
 }
 
 .radio-group {
@@ -295,6 +300,7 @@ p {
     gap: 0.5rem;
     font-weight: normal;
     cursor: pointer;
+    color: var(--text-green);
 }
 
 .radio-group input[type="radio"] {
@@ -303,7 +309,7 @@ p {
 
 .submit-btn {
     width: 100%;
-    background: var(--text-color);
+    background: var(--text-green);
     color: white;
     border: none;
     padding: 15px;
@@ -314,13 +320,16 @@ p {
 }
 
 .submit-btn:hover {
-    background: var(--medium-brown);
+    background: #25261f;
 }
 
 /* Контакты */
 .contacts {
     padding: 4rem 1rem;
     text-align: center;
+    background-color: var(--main-brown);
+    border-radius: 15px;
+    margin: 2rem 0;
 }
 
 .contacts__list {
@@ -338,45 +347,49 @@ p {
 .contacts__person a {
     display: block;
     font-size: 1.2rem;
-    color: var(--text-color);
+    color: var(--text-green);
     text-decoration: none;
     margin-top: 0.5rem;
 }
 
 .contacts__person a:hover {
-    color: var(--medium-brown);
+    color: #25261f;
 }
 
 .contacts__note {
     font-size: 0.9rem;
-    color: #666;
+    color: var(--text-green);
     margin-top: 0.5rem;
     font-style: italic;
+    opacity: 0.8;
 }
 
 .telegram-link {
     margin-top: 2rem;
     padding: 1.5rem;
-    background-color: rgba(49, 50, 39, 0.1);
+    background-color: rgba(49, 50, 39, 0.2);
     border-radius: 10px;
     text-align: center;
 }
 
 .telegram-link a {
-    color: var(--text-color);
+    color: var(--text-green);
     font-weight: bold;
     text-decoration: none;
     font-size: 1.1rem;
 }
 
 .telegram-link a:hover {
-    color: var(--medium-brown);
+    color: #25261f;
 }
 
 /* Галерея - вертикальное расположение */
 .gallery {
     padding: 3rem 1rem;
     text-align: center;
+    background-color: var(--main-brown);
+    border-radius: 15px;
+    margin: 2rem 0;
 }
 
 .gallery__images {
@@ -399,16 +412,14 @@ p {
     text-align: center;
     padding: 2rem;
     margin-top: 2rem;
-    color: var(--text-color);
+    color: var(--text-green);
     font-style: italic;
-    border-top: 1px solid #E8D7C7;
 }
 
 /* Адаптивность */
 @media (max-width: 768px) {
     body {
         padding-top: 80px;
-        background-color: var(--background-brown);
     }
     
     .wrapper {
@@ -464,7 +475,6 @@ p {
     
     .dresscode {
         padding: 2rem 1rem;
-        margin: 1.5rem 0;
     }
     
     .contacts__list {
