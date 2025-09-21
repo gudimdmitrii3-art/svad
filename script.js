@@ -9,17 +9,10 @@ function updateCountdown() {
     const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-    // Первый таймер
     document.getElementById("days").innerText = days.toString().padStart(2, '0');
     document.getElementById("hours").innerText = hours.toString().padStart(2, '0');
     document.getElementById("minutes").innerText = minutes.toString().padStart(2, '0');
     document.getElementById("seconds").innerText = seconds.toString().padStart(2, '0');
-
-    // Второй таймер
-    document.getElementById("days2").innerText = days.toString().padStart(2, '0');
-    document.getElementById("hours2").innerText = hours.toString().padStart(2, '0');
-    document.getElementById("minutes2").innerText = minutes.toString().padStart(2, '0');
-    document.getElementById("seconds2").innerText = seconds.toString().padStart(2, '0');
 
     if (distance < 0) {
         clearCountdown();
@@ -27,16 +20,13 @@ function updateCountdown() {
 }
 
 function clearCountdown() {
-    const timerText = "<div class='countdown__item'><span class='countdown__number' style='font-size: 1.5rem;'>Мы поженились!</span></div>";
-    document.getElementById("timer").innerHTML = timerText;
-    document.getElementById("timer2").innerHTML = timerText;
+    document.getElementById("timer").innerHTML = "<div class='countdown__item'><span class='countdown__number' style='font-size: 1.5rem;'>Мы поженились!</span></div>";
 }
 
 // Управление музыкой
 const audio = document.getElementById('weddingMusic');
 const musicToggle = document.getElementById('musicToggle');
 
-// По умолчанию музыка выключена
 audio.pause();
 musicToggle.textContent = '🔇';
 
@@ -54,6 +44,27 @@ function toggleMusic() {
 
 musicToggle.addEventListener('click', toggleMusic);
 
-// Запуск таймера
+// Слайдер галереи
+let currentSlide = 0;
+const slides = document.querySelectorAll('.gallery__slide');
+const totalSlides = slides.length;
+
+function showSlide(n) {
+    slides.forEach(slide => slide.classList.remove('active'));
+    currentSlide = (n + totalSlides) % totalSlides;
+    slides[currentSlide].classList.add('active');
+    document.querySelector('.gallery__counter').textContent = `${currentSlide + 1}/${totalSlides}`;
+}
+
+document.querySelector('.gallery__prev').addEventListener('click', () => {
+    showSlide(currentSlide - 1);
+});
+
+document.querySelector('.gallery__next').addEventListener('click', () => {
+    showSlide(currentSlide + 1);
+});
+
+// Запуск
 updateCountdown();
 setInterval(updateCountdown, 1000);
+showSlide(0);
