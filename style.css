@@ -1,3 +1,12 @@
+/* Цветовая палитра */
+:root {
+    --dark-brown: #533024;
+    --medium-brown: #835845;
+    --dark-green: #444B3C;
+    --dark-gray: #313227;
+    --cream: #EFEADD;
+}
+
 /* Общие стили и сброс */
 * {
     margin: 0;
@@ -7,8 +16,8 @@
 
 body {
     font-family: 'El Messiri', 'Cormorant Infant', serif;
-    background-color: #EFEADD;
-    color: #5A6A62;
+    background-color: var(--cream);
+    color: var(--dark-green);
     line-height: 1.6;
     padding-top: 60px;
 }
@@ -27,19 +36,19 @@ h1, h2, h3 {
 h1 {
     font-size: 3.5rem;
     margin-bottom: 0.5rem;
-    color: #5A6A62;
+    color: var(--dark-brown);
 }
 
 h2 {
     font-size: 2.5rem;
     margin: 3rem 0 2rem 0;
-    color: #BA506A;
+    color: var(--medium-brown);
 }
 
 h3 {
     font-size: 1.8rem;
     margin-bottom: 1rem;
-    color: #5A6A62;
+    color: var(--dark-brown);
 }
 
 p {
@@ -53,7 +62,7 @@ p {
     top: 20px;
     right: 20px;
     z-index: 1000;
-    background: #BA506A;
+    background: var(--medium-brown);
     color: white;
     border: none;
     padding: 10px 15px;
@@ -80,20 +89,20 @@ p {
 }
 
 .hero__content span {
-    color: #BA506A;
+    color: var(--medium-brown);
     font-style: italic;
 }
 
 .hero__date {
     font-size: 1.5rem;
     margin: 1rem 0;
-    color: #BA506A;
+    color: var(--medium-brown);
 }
 
 .hero__verse {
     font-style: italic;
     font-size: 1.2rem;
-    color: #6D7A71;
+    color: var(--dark-green);
 }
 
 .hero__image {
@@ -124,30 +133,32 @@ p {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 2rem;
+    gap: 1rem;
     margin-top: 2rem;
 }
 
 .countdown__item {
     display: flex;
     flex-direction: column;
-    background-color: #EFEADD;
-    padding: 1.5rem 1rem;
+    background-color: var(--cream);
+    padding: 1rem 0.5rem;
     border-radius: 10px;
-    min-width: 100px;
+    min-width: 70px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .countdown__number {
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 700;
-    color: #BA506A;
+    color: var(--medium-brown);
+    white-space: nowrap;
 }
 
 .countdown__label {
-    font-size: 1rem;
-    color: #6D7A71;
+    font-size: 0.8rem;
+    color: var(--dark-green);
     margin-top: 0.5rem;
+    white-space: nowrap;
 }
 
 /* Детали */
@@ -177,13 +188,13 @@ p {
 .details__time {
     font-size: 1.5rem;
     font-weight: 600;
-    color: #BA506A;
+    color: var(--medium-brown);
     margin: 1rem 0;
 }
 
 .details__place {
     font-style: italic;
-    color: #6D7A71;
+    color: var(--dark-green);
 }
 
 /* Карты */
@@ -196,7 +207,7 @@ p {
 
 /* Дресс-код */
 .dresscode {
-    padding: 4rem 1rem;
+    padding: 3rem 1rem;
     background-color: #E8D7C7;
     border-radius: 15px;
     margin: 2rem 0;
@@ -216,14 +227,6 @@ p {
     width: 100%;
     height: auto;
     display: block;
-}
-
-.dresscode__text {
-    font-style: italic;
-    color: #6D7A71;
-    margin-top: 1.5rem;
-    text-align: center;
-    line-height: 1.6;
 }
 
 /* Подарки */
@@ -257,7 +260,7 @@ p {
     display: block;
     margin-bottom: 0.5rem;
     font-weight: 600;
-    color: #5A6A62;
+    color: var(--dark-green);
     text-align: left;
 }
 
@@ -276,7 +279,7 @@ p {
 .form-group select:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: #BA506A;
+    border-color: var(--medium-brown);
 }
 
 .radio-group {
@@ -299,7 +302,7 @@ p {
 
 .submit-btn {
     width: 100%;
-    background: #BA506A;
+    background: var(--medium-brown);
     color: white;
     border: none;
     padding: 15px;
@@ -310,7 +313,7 @@ p {
 }
 
 .submit-btn:hover {
-    background: #a43a5a;
+    background: var(--dark-brown);
 }
 
 /* Контакты */
@@ -334,13 +337,61 @@ p {
 .contacts__person a {
     display: block;
     font-size: 1.2rem;
-    color: #6D7A71;
+    color: var(--dark-green);
     text-decoration: none;
     margin-top: 0.5rem;
 }
 
 .contacts__person a:hover {
-    color: #BA506A;
+    color: var(--medium-brown);
+}
+
+.contacts__note {
+    font-size: 0.9rem;
+    color: var(--dark-gray);
+    margin-top: 0.5rem;
+    font-style: italic;
+}
+
+.telegram-link {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background-color: rgba(131, 88, 69, 0.1);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.telegram-link a {
+    color: var(--medium-brown);
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+.telegram-link a:hover {
+    color: var(--dark-brown);
+}
+
+/* Галерея */
+.gallery-preview {
+    padding: 3rem 1rem;
+    text-align: center;
+}
+
+.gallery__images {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+}
+
+.gallery__images img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
 }
 
 /* Футер */
@@ -348,7 +399,7 @@ p {
     text-align: center;
     padding: 2rem;
     margin-top: 2rem;
-    color: #6D7A71;
+    color: var(--dark-green);
     font-style: italic;
     border-top: 1px solid #E8D7C7;
 }
@@ -375,16 +426,20 @@ p {
     }
     
     .countdown__timer {
-        gap: 1rem;
+        gap: 0.5rem;
     }
     
     .countdown__item {
-        min-width: 70px;
-        padding: 1rem 0.5rem;
+        min-width: 60px;
+        padding: 0.8rem 0.3rem;
     }
     
     .countdown__number {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
+    }
+    
+    .countdown__label {
+        font-size: 0.7rem;
     }
     
     .details__container {
@@ -414,10 +469,35 @@ p {
     .rsvp__form {
         padding: 1.5rem;
     }
+    
+    .gallery__images img {
+        width: 150px;
+        height: 150px;
+    }
 }
 
 @media (max-width: 480px) {
     .dresscode__image {
         max-width: 200px;
+    }
+    
+    .countdown__item {
+        min-width: 55px;
+        padding: 0.7rem 0.2rem;
+    }
+    
+    .countdown__number {
+        font-size: 1.3rem;
+    }
+    
+    .gallery__images {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .gallery__images img {
+        width: 100%;
+        max-width: 250px;
+        height: auto;
     }
 }
