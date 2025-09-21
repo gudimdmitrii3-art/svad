@@ -1,7 +1,7 @@
 /* Цветовая палитра */
 :root {
     --main-brown: #835845;
-    --text-green: #043927; /* Изменен на яркий зеленый */
+    --text-green: #27ae60; /* Изменен на яркий зеленый */
     --cream: #EFEADD;
     --medium-brown: #835845;
 }
@@ -221,14 +221,27 @@ p {
 .details__place {
     font-style: italic;
     color: var(--text-green);
+    margin-bottom: 1.5rem;
 }
 
-/* Карты */
-.map-container {
-    margin-top: 1.5rem;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+/* Кнопка карты */
+.map-btn {
+    display: block;
+    width: 100%;
+    background: var(--text-green);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-family: inherit;
+    margin-top: 1rem;
+    transition: background 0.3s;
+}
+
+.map-btn:hover {
+    background: #219653;
 }
 
 /* Дресс-код */
@@ -551,6 +564,3 @@ p {
         font-size: 1.3rem;
     }
 }
-
-
-
