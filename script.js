@@ -44,27 +44,6 @@ function toggleMusic() {
 
 musicToggle.addEventListener('click', toggleMusic);
 
-// Слайдер галереи
-let currentSlide = 0;
-const slides = document.querySelectorAll('.gallery__slide');
-const totalSlides = slides.length;
-
-function showSlide(n) {
-    slides.forEach(slide => slide.classList.remove('active'));
-    currentSlide = (n + totalSlides) % totalSlides;
-    slides[currentSlide].classList.add('active');
-    document.querySelector('.gallery__counter').textContent = `${currentSlide + 1}/${totalSlides}`;
-}
-
-document.querySelector('.gallery__prev').addEventListener('click', () => {
-    showSlide(currentSlide - 1);
-});
-
-document.querySelector('.gallery__next').addEventListener('click', () => {
-    showSlide(currentSlide + 1);
-});
-
 // Запуск
 updateCountdown();
 setInterval(updateCountdown, 1000);
-showSlide(0);
