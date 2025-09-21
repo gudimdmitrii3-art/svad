@@ -1,9 +1,9 @@
 /* Цветовая палитра */
 :root {
-    --main-brown: #835845;
+    --main-brown: #87a96b;
     --text-green: #27ae60; /* Изменен на яркий зеленый */
     --cream: #EFEADD;
-    --medium-brown: #835845;
+    --medium-brown: #87a96b;
 }
 
 /* Общие стили и сброс */
@@ -564,3 +564,4 @@ p {
         font-size: 1.3rem;
     }
 }
+
