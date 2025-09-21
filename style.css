@@ -1,9 +1,9 @@
 /* Цветовая палитра */
 :root {
-    --main-brown: #87a96b;
+    --main-brown: #835845;
     --text-green: #27ae60; /* Изменен на яркий зеленый */
     --cream: #EFEADD;
-    --medium-brown: #87a96b;
+    --medium-brown: #835845;
 }
 
 /* Общие стили и сброс */
@@ -15,7 +15,7 @@
 
 body {
     font-family: 'El Messiri', 'Cormorant Infant', serif;
-    background-color: var(--main-brown);
+    background: url('images/f.jpg') repeat;
     color: var(--text-green);
     line-height: 1.6;
     padding-top: 60px;
@@ -147,7 +147,7 @@ p {
 .countdown {
     text-align: center;
     padding: 4rem 1rem;
-    background-color: var(--main-brown);
+    background-color: rgba(131, 88, 69, 0.9);
     border-radius: 15px;
     margin: 2rem 0;
 }
@@ -188,7 +188,7 @@ p {
 .details {
     padding: 4rem 1rem;
     text-align: center;
-    background-color: var(--main-brown);
+    background-color: rgba(131, 88, 69, 0.9);
     border-radius: 15px;
     margin: 2rem 0;
 }
@@ -247,7 +247,7 @@ p {
 /* Дресс-код */
 .dresscode {
     padding: 3rem 1rem;
-    background-color: var(--main-brown);
+    background-color: rgba(131, 88, 69, 0.9);
     border-radius: 15px;
     margin: 2rem 0;
     text-align: center;
@@ -272,7 +272,7 @@ p {
 .gifts {
     padding: 4rem 1rem;
     text-align: center;
-    background-color: var(--main-brown);
+    background-color: rgba(131, 88, 69, 0.9);
     border-radius: 15px;
     margin: 2rem 0;
 }
@@ -280,7 +280,7 @@ p {
 /* Форма */
 .rsvp {
     padding: 4rem 1rem;
-    background-color: var(--main-brown);
+    background-color: rgba(131, 88, 69, 0.9);
     border-radius: 15px;
     margin: 2rem 0;
 }
@@ -365,7 +365,7 @@ p {
 .contacts {
     padding: 4rem 1rem;
     text-align: center;
-    background-color: var(--main-brown);
+    background-color: rgba(131, 88, 69, 0.9);
     border-radius: 15px;
     margin: 2rem 0;
 }
@@ -425,7 +425,7 @@ p {
 .gallery {
     padding: 3rem 1rem;
     text-align: center;
-    background-color: var(--main-brown);
+    background-color: rgba(131, 88, 69, 0.9);
     border-radius: 15px;
     margin: 2rem 0;
 }
@@ -564,4 +564,3 @@ p {
         font-size: 1.3rem;
     }
 }
-
