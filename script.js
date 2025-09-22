@@ -47,12 +47,14 @@ musicToggle.addEventListener('click', toggleMusic);
 
 // Обработка формы
 const form = document.getElementById('rsvpForm');
-const formMessage = document.getElementById('formMessage');
+const formSuccessMessage = document.getElementById('formSuccessMessage');
+const formRegretMessage = document.getElementById('formRegretMessage');
 
 form.addEventListener('submit', function(e) {
     e.preventDefault(); // Предотвращаем стандартную отправку формы
 
     const formData = new FormData(form);
+    const attendance = formData.get('attendance');
     const object = Object.fromEntries(formData.entries());
     const json = JSON.stringify(object);
 
@@ -70,7 +72,11 @@ form.addEventListener('submit', function(e) {
     .then(data => {
         if (data.success) {
             form.style.display = 'none';
-            formMessage.style.display = 'block';
+            if (attendance === 'Приду') {
+                formSuccessMessage.style.display = 'block';
+            } else if (attendance === 'Не смогу') {
+                formRegretMessage.style.display = 'block';
+            }
         } else {
             alert('Что-то пошло не так. Пожалуйста, попробуйте еще раз.');
         }
