@@ -1,7 +1,7 @@
 /* Цветовая палитра */
 :root {
     --main-brown: #f6e4d3;
-    --text-green:#2E8B57; /* Изменен на яркий зеленый */
+    --text-green: #2E8B57;
     --cream: #f6e4d3;
     --medium-brown: #8FFEFDF;
 }
@@ -361,6 +361,16 @@ p {
     background: #219653;
 }
 
+/* Сообщение об успехе */
+.success-message {
+    text-align: center;
+    background-color: rgba(46, 139, 87, 0.1);
+    padding: 2rem;
+    border-radius: 15px;
+    margin-top: 2rem;
+    border: 2px solid var(--text-green);
+}
+
 /* Контакты */
 .contacts {
     padding: 4rem 1rem;
@@ -564,5 +574,3 @@ p {
         font-size: 1.3rem;
     }
 }
-
-
