@@ -44,6 +44,36 @@ function toggleMusic() {
 
 musicToggle.addEventListener('click', toggleMusic);
 
+// Обработка формы RSVP
+document.getElementById('rsvpForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // Здесь должна быть логика отправки формы на сервер
+    // Для примера просто показываем сообщение об успехе
+    document.getElementById('rsvpForm').style.display = 'none';
+    document.getElementById('successMessage').style.display = 'block';
+    
+    // В реальном приложении здесь должен быть код отправки данных на сервер
+    // Например, с использованием fetch API
+    /*
+    const formData = new FormData(this);
+    
+    fetch('https://formsubmit.co/wedding_am@mail.ru', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        document.getElementById('rsvpForm').style.display = 'none';
+        document.getElementById('successMessage').style.display = 'block';
+    })
+    .catch(error => {
+        console.error('Ошибка:', error);
+        alert('Произошла ошибка при отправке формы. Пожалуйста, попробуйте еще раз.');
+    });
+    */
+});
+
 // Запуск
 updateCountdown();
 setInterval(updateCountdown, 1000);
