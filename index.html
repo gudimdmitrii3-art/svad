@@ -89,50 +89,54 @@
             <h2>Подтвердите ваше присутствие</h2>
             <p>Пожалуйста, ответьте до 1 октября 2025 года</p>
             
-            <form class="rsvp__form" action="https://formsubmit.co/wedding_am@mail.ru" method="POST">
-                <input type="hidden" name="_subject" value="Новый ответ на свадьбу!">
-                <input type="hidden" name="_template" value="table">
-                
-                <div class="form-group">
-                    <label for="name">Ваше имя и фамилия</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                
-                <div class="form-group">
-                    <label>Вы придёте?</label>
-                    <div class="radio-group">
-                        <label>
-                            <input type="radio" name="attendance" value="Приду" required>
-                            <span>С радостью приду!</span>
-                        </label>
-                        <label>
-                            <input type="radio" name="attendance" value="Не смогу">
-                            <span>К сожалению, не смогу</span>
-                        </label>
-                    </div>
-                </div>
-                
-                <div class="form-group">
-                    <label for="guests">Количество гостей (включая вас)</label>
-                    <select id="guests" name="guests">
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                         <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                    </select>
-                </div>
-                
-                <div class="form-group">
-                    <label for="message">Ваши пожелания и предложения (необязательно)</label>
-                    <textarea id="message" name="message" rows="3"></textarea>
-                </div>
-                
-                <button type="submit" class="submit-btn">Отправить ответ</button>
-            </form>
+           <form class="rsvp__form" action="https://formsubmit.co/wedding_am@mail.ru" method="POST">
+    <!-- Обязательные скрытые поля для Formsubmit -->
+    <input type="hidden" name="_subject" value="Новый ответ на свадьбу!">
+    <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_next" value="https://вашсайт.ru/thankyou.html">
+    
+    <div class="form-group">
+        <label for="name">Ваше имя и фамилия</label>
+        <input type="text" id="name" name="name" required>
+    </div>
+    
+    <div class="form-group">
+        <label>Вы придёте?</label>
+        <div class="radio-group">
+            <label>
+                <input type="radio" name="attendance" value="Приду" required>
+                <span>С радостью приду!</span>
+            </label>
+            <label>
+                <input type="radio" name="attendance" value="Не смогу">
+                <span>К сожалению, не смогу</span>
+            </label>
+        </div>
+    </div>
+    
+    <div class="form-group">
+        <label for="guests">Количество гостей (включая вас)</label>
+        <select id="guests" name="guests">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+        </select>
+    </div>
+    
+    <div class="form-group">
+        <label for="message">Ваши пожелания и предложения (необязательно)</label>
+        <textarea id="message" name="message" rows="3"></textarea>
+    </div>
+    
+    <button type="submit" class="submit-btn">Отправить ответ</button>
+</form>
         </section>
 
         <section class="gifts">
@@ -182,6 +186,7 @@
     <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
