@@ -25,7 +25,6 @@
             <div class="hero__image">
                 <img src="images/0.jpeg" alt="Максим и Настя">
             </div>
-            <!-- Добавленный текст под фото -->
             <div class="hero__announcement">
                 <h2>Мы женимся!</h2>
                 <p>В этот особенный день мы хотим оказаться в окружении самых<br>
@@ -89,16 +88,16 @@
             <h2>Подтвердите ваше присутствие</h2>
             <p>Пожалуйста, ответьте до 1 октября 2025 года</p>
             
-            <form class="rsvp__form" id="rsvpForm">
+            <form id="rsvpForm" class="rsvp__form">
                 <input type="hidden" name="_subject" value="Новый ответ на свадьбу!">
                 <input type="hidden" name="_template" value="table">
                 <input type="hidden" name="_captcha" value="false">
-                
+            
                 <div class="form-group">
                     <label for="name">Ваше имя и фамилия</label>
                     <input type="text" id="name" name="name" required>
                 </div>
-                
+            
                 <div class="form-group">
                     <label>Вы придёте?</label>
                     <div class="radio-group">
@@ -112,7 +111,7 @@
                         </label>
                     </div>
                 </div>
-                
+            
                 <div class="form-group">
                     <label for="guests">Количество гостей (включая вас)</label>
                     <select id="guests" name="guests">
@@ -127,19 +126,20 @@
                         <option value="9">9</option>
                     </select>
                 </div>
-                
+            
                 <div class="form-group">
                     <label for="message">Ваши пожелания и предложения (необязательно)</label>
                     <textarea id="message" name="message" rows="3"></textarea>
                 </div>
-                
+            
                 <button type="submit" class="submit-btn">Отправить ответ</button>
             </form>
             
-            <div id="successMessage" class="success-message" style="display: none;">
-                <h3>Спасибо за ответ!</h3>
-                <p>Мы получили ваше подтверждение и очень рады, что вы сможете разделить с нами этот особенный день!</p>
+            <div id="formMessage" class="form-message hidden">
+                <h3>Спасибо за ответ! ❤️</h3>
+                <p>Мы получили ваше подтверждение. Ждём с нетерпением нашего дня!</p>
             </div>
+
         </section>
 
         <section class="gifts">
