@@ -4,6 +4,11 @@ function updateCountdown() {
     const now = new Date().getTime();
     const distance = weddingDate - now;
 
+    if (distance < 0) {
+        clearCountdown();
+        return;
+    }
+
     const days = Math.floor(distance / (1000 * 60 * 60 * 24));
     const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
@@ -13,10 +18,6 @@ function updateCountdown() {
     document.getElementById("hours").innerText = hours.toString().padStart(2, '0');
     document.getElementById("minutes").innerText = minutes.toString().padStart(2, '0');
     document.getElementById("seconds").innerText = seconds.toString().padStart(2, '0');
-
-    if (distance < 0) {
-        clearCountdown();
-    }
 }
 
 function clearCountdown() {
@@ -44,34 +45,40 @@ function toggleMusic() {
 
 musicToggle.addEventListener('click', toggleMusic);
 
-// Обработка формы RSVP
-document.getElementById('rsvpForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    // Здесь должна быть логика отправки формы на сервер
-    // Для примера просто показываем сообщение об успехе
-    document.getElementById('rsvpForm').style.display = 'none';
-    document.getElementById('successMessage').style.display = 'block';
-    
-    // В реальном приложении здесь должен быть код отправки данных на сервер
-    // Например, с использованием fetch API
-    /*
-    const formData = new FormData(this);
-    
-    fetch('https://formsubmit.co/wedding_am@mail.ru', {
+// Обработка формы
+const form = document.getElementById('rsvpForm');
+const formMessage = document.getElementById('formMessage');
+
+form.addEventListener('submit', function(e) {
+    e.preventDefault(); // Предотвращаем стандартную отправку формы
+
+    const formData = new FormData(form);
+    const object = Object.fromEntries(formData.entries());
+    const json = JSON.stringify(object);
+
+    const email = 'wedding_am@mail.ru'; // Замените на свою почту
+
+    fetch(`https://formsubmit.co/ajax/${email}`, {
         method: 'POST',
-        body: formData
+        headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+        },
+        body: json
     })
     .then(response => response.json())
     .then(data => {
-        document.getElementById('rsvpForm').style.display = 'none';
-        document.getElementById('successMessage').style.display = 'block';
+        if (data.success) {
+            form.style.display = 'none';
+            formMessage.style.display = 'block';
+        } else {
+            alert('Что-то пошло не так. Пожалуйста, попробуйте еще раз.');
+        }
     })
     .catch(error => {
         console.error('Ошибка:', error);
-        alert('Произошла ошибка при отправке формы. Пожалуйста, попробуйте еще раз.');
+        alert('Что-то пошло не так. Пожалуйста, проверьте подключение и попробуйте еще раз.');
     });
-    */
 });
 
 // Запуск
